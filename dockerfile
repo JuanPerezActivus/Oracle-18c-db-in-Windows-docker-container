@@ -29,9 +29,3 @@ ENV ORACLE_SID orclcdb
 ENV CLASSPATH c:\\data\\db_home\\jlib;c:\\data\\db_home\\rdbms\\jlib;
 
 EXPOSE 5500 1521 
-
-#COPY /scripts C:/data/app/myhome/admin/orclcdb
-#RUN c:/data/app/myhome/admin/orclcdb/scripts/orclcdb.bat
-
-COPY post_install.bat c:/data/post_install.bat
-CMD ["c:/data/post_install.bat"]
