@@ -1,4 +1,4 @@
-**Oracle-18c-db-in-Windows-docker-container**
+# H1 **Oracle-18c-db-in-Windows-docker-container**
 
 Downloaded from Oracle WINDOWS.X64_180000_db_home.zip bundle, the main package used for this project
 
@@ -18,10 +18,10 @@ Image Build Log
 PS E:\docker\dockerfiles\18c> docker image build -t 2016oracle18c -f dockerfile .
 Sending build context to Docker daemon  14.43GB
 
-[WARNING]: Empty continuation line found in:
-    RUN powershell.exe -Command $ErrorActionPreference = 'Stop'; Start-Process c:\vcredist_x64.exe -ArgumentList '/install /passive /norestart ' -Wait ; Remove-Item c:\vcredist_x64.exe -Force
+*[WARNING]: Empty continuation line found in:
+    RUN powershell.exe -Command $ErrorActionPreference = 'Stop'; Start-Process c:\vcredist_x64.exe -ArgumentList '/install /passive /norestart ' -Wait ; Remove-Item c:\vcredist_x64.exe -Force*
 
-[WARNING]: Empty continuation lines will become errors in a future release.
+*[WARNING]: Empty continuation lines will become errors in a future release.*
 
 Step 1/15 : FROM mcr.microsoft.com/windows/servercore:1809
  ---> 29a2c2cb7e4d
@@ -62,14 +62,14 @@ Step 9/15 : RUN c:\data\db_home\setup.bat -silent -noconfig -skipPrereqs -respon
 
 Launching Oracle Database Setup Wizard...
 
-[WARNING] [INS-35810] You have selected to use Built-in Account for installation and configuration of Oracle Home. Oracle recommends that you specify a Windows User Account with limited privilege to install and configure a secure Oracle Home.
-   ACTION: Specify a Windows User Account.
+*[WARNING] [INS-35810] You have selected to use Built-in Account for installation and configuration of Oracle Home. Oracle recommends that you specify a Windows User Account with limited privilege to install and configure a secure Oracle Home.
+   ACTION: Specify a Windows User Account.*
 
-[FATAL] [INS-35180] Unable to check for available memory.
-*ADDITIONAL INFORMATION:*
+**[FATAL] [INS-35180] Unable to check for available memory.
+*ADDITIONAL INFORMATION:**
 
-Exception details
- - PRVG-1901 : failed to setup CVU remote execution framework directory "C:\Users\ContainerAdministrator\AppData\Local\Temp\InstallActions2019-05-17_11-21-01AM\CVU_18.0.0.0.0_ContainerAdministrator\" on nodes "b0e3067cf4df" Please select a different work area for the framework b0e3067cf4df : PRKN-1014 : Failed to execute remote command "C:\Users\ContainerAdministrator\AppData\Local\Temp\InstallActions2019-05-17_11-21-01AM\CVU_18.0.0.0.0_ContainerAdministrator\\exectask.exe" on node "b0e3067cf4df".Failed during connecting to service b0e3067cf4df : Failed during connecting to service Version of exectask could not be retrieved from node "b0e3067cf4df"
+**Exception details
+ - PRVG-1901 : failed to setup CVU remote execution framework directory "C:\Users\ContainerAdministrator\AppData\Local\Temp\InstallActions2019-05-17_11-21-01AM\CVU_18.0.0.0.0_ContainerAdministrator\" on nodes "b0e3067cf4df" Please select a different work area for the framework b0e3067cf4df : PRKN-1014 : Failed to execute remote command "C:\Users\ContainerAdministrator\AppData\Local\Temp\InstallActions2019-05-17_11-21-01AM\CVU_18.0.0.0.0_ContainerAdministrator\\exectask.exe" on node "b0e3067cf4df".Failed during connecting to service b0e3067cf4df : Failed during connecting to service Version of exectask could not be retrieved from node "b0e3067cf4df"**
 
 
 Removing intermediate container b0e3067cf4df
